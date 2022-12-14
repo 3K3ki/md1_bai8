@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  .btn{
+    margin: auto;
+    width: 90px;
+    height: 90px;
+    background-color: red;
+    flex: auto;
+  }
+</style>
+<body>
+<h3>Caro Game Simple</h3>
+<table>
+  <script>
+    for (let i = 0; i<3 ; i++) {
+      document.write('<tr>')
+      for (let j  = 0; j < 3; j++) {
+        document.write(`<td id="${3*i+j+1}" onclick="tickCell("${3*i+j+1}")"></td>`)// truyêền id của thẻ td
+      }
+      document.write('</tr>')
+    }
+  </script>
+</table>
+</body>
+<script>
+  let turn = 1;
+  function tickCell(index) { // định nghĩa hàng tickCell có 1 tham soos là id
+    if(document.getElementById(index).innerText == ''){
+    if (turn % 2 == 1){
+      document.getElementById(index).innerText = 'x';
+    } else {
+      document.getElementById(index).innerText = 'y';
+    }
+    turn++;
+  }
+    checkWin()
+  }
+  function checkWin() {
+    let arr = [];
+    let listtTD ơ document
+  }
+
+
+</script>
+</html>

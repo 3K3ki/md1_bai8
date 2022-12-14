@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="search">
+<button onclick="searchDirect()">
+    search
+</button>
+<h1 id="ket_qua"></h1>
+</body>
+<script>
+    let a = ''
+    let array1 = ['Bố', 'Mẹ', 'Anh', 'Chị'];
+    let array2 = ['Father', 'Mother', 'Brother', 'Sister']
+
+    function searchDirect() {
+        let result = document.getElementById('search').value;
+        for (let i = 0; i < array1.length; i++) {
+            if (result == array1[i]) {
+                a = i;
+                document.getElementById('ket_qua').innerHTML = array2[i]
+                break;
+            }else {
+                document.getElementById('ket_qua').innerHTML =" Không có trong từ điển"
+            }
+        }
+    }
+</script>
+</html>
